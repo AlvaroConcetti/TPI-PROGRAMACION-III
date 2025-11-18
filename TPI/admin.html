@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <title>Panel Admin - Pizzería</title>
+
+    <script src="admin.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Panel de Administración</h1>
+      <nav>
+        <button id="btn-logout">Cerrar sesión</button>
+      </nav>
+    </header>
+    <main>
+      <section id="abm-menu">
+        <h2>Gestión del Menú</h2>
+        <form id="form-nuevo">
+          <input type="hidden" id="edit-id"/>
+          <label >Nombre: <input type="text" id="nombre" required/></label>
+          <br/>
+          <label id="lbl-tipo"
+            >Tipo:
+            <select id="tipo" required>
+              <option value="pizza">Pizza</option>
+              <option value="bebida">Bebida</option>
+            </select> 
+          </label>
+          <br />
+          <label>Precio: <input type="number" id="precio" required min="0"/></label>
+          <br />
+          <label
+            >Disponible:
+            <select id="disponible">
+              <option value="true">Sí</option>
+              <option value="false">No</option>
+            </select> 
+          </label>
+          <br/>
+          <button type="submit" id="btn-guardar">Agregar producto</button>
+        </form>
+
+        <h2>Listado actual</h2>
+        <table id="tabla-menu">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Precio</th>
+              <th>Disponible</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body"></tbody>
+        </table>
+
+        <section id="pedidos-admin">
+          <h2>Gestión de Pedidos</h2>
+          <table id="tabla-pedidos">
+            <thead>
+              <tr>
+                <th>ID Pedido</th>
+                <th>Usuario</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="pedidos-body"></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <title>Pizzería - Login / Registro</title>
+
+    <script src="auth.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body id="principal">
+    <main>
+      <h1>Pizzería - Iniciar sesión / Registrarse</h1>
+      <section id="auth-area">
+        
+        <!-- Formulario de login -->
+        <div id="login-box">
+          <h2>Iniciar sesión</h2>
+          <form id="login-form">
+            <label>Email: <input type="email" id="login-email" required/></label>
+              <br/>
+            <label>Password: <input type="password" id="login-password" required/></label>
+              <br/>
+            <button type="submit">Entrar</button>
+          </form>
+          <p id="login-msg"></p>
+        </div>
+
+        <!-- Formulario de registro -->
+        <div id="register-box">
+          <h2>Registrarse</h2>
+          <form id="register-form">
+            <label>Nombre: <input type="text" id="reg-nombre" required/></label>
+            <br/>
+            <label>Email: <input type="email" id="reg-email" required/></label>
+            <br/>
+            <label>Password: <input type= "password" id="reg-password" required minlength="3"/></label>
+            <br />
+
+            <!-- Seleccion de rol -->
+            <label>Rol:
+              <select id="role">
+                <option value="user">Usuario</option>
+                <option value="admin">Admin (solo para pruebas)</option>
+              </select> 
+            </label>
+            <br/>
+            <button type="submit">Crear cuenta</button>
+          </form>
+          <p id="reg-msg"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

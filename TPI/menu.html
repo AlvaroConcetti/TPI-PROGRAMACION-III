@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <title>Pizzería - Menú</title>
+
+    <script src="menu.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido a la Pizzería</h1>
+      <nav>
+        <button id="btn-ver-carrito">Ver carrito</button>
+        <button id="btn-logout">Cerrar sesión</button>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Menú disponible</h2>
+      <div id="menu-container"></div>
+      <section id="carrito-section" style="display: none">
+        <h2>Tu carrito</h2>
+        <ul id="carrito-lista"></ul>
+        <p><strong>Total: $<span id="carrito-total">0</span></strong></p>
+        <button id="btn-enviar-pedido">Enviar pedido</button>
+        <button id="btn-cerrar-carrito">Cerrar</button>
+      </section>
+    </main>
+  </body>
+</html>
