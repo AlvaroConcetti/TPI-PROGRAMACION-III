@@ -85,7 +85,7 @@ form.addEventListener("submit", async (e) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(producto),
       });
-      alert("Producto actualizado ✅");
+      alert("Producto actualizado");
     } 
     // creamos un prod y lo mandamos a mockapi
     else
@@ -95,7 +95,7 @@ form.addEventListener("submit", async (e) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(producto),
       });
-      alert("Producto agregado ✅");
+      alert("Producto agregado");
     }
 
     form.reset();
@@ -135,7 +135,7 @@ async function eliminarProducto(id) {
 
   try {
     await fetch(`${MENU_URL}/${id}`, { method: "DELETE" });
-    alert("Producto eliminado 🗑️");
+    alert("Producto eliminado");
     cargarMenu();
   } catch (err) {
     console.error("Error al eliminar:", err);
@@ -277,5 +277,6 @@ function graficar(pedidos) {
     }
   });
 }
+
 
 cargarPedidos();
