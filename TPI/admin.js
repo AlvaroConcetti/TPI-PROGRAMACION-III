@@ -201,7 +201,7 @@ async function cambiarEstado(id, estadoActual) {
   if (estadoActual === "pendiente") nuevoEstado = "en preparación";
   else if (estadoActual === "en preparación") nuevoEstado = "entregado";
   else {
-    alert("Este pedido ya está entregado ✅");
+    alert("Este pedido ya está entregado");
     return;
   }
 
@@ -280,3 +280,4 @@ function graficar(pedidos) {
 
 
 cargarPedidos();
+
